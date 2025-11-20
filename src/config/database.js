@@ -1,4 +1,5 @@
 import Sequelize from 'sequelize'
+import pg from 'pg'
 
 //Variables
 /*
@@ -21,7 +22,8 @@ const dialect = 'postgres'
 const sequelize = new Sequelize(database, username, password, {
     host: hostname,
     port: port,
-    dialect: dialect
+    dialect: dialect,
+    dialectModule: pg
 })
 
 export default sequelize;
